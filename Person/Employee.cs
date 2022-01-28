@@ -42,7 +42,7 @@ namespace Person
 
         public string GetInfo()
         {
-            return $"Full name: {LastName} {FirstName} {Patronymic}\nDate of employment: {DateOfEmployment.Date}\n" +
+            return $"Full name: {LastName} {FirstName} {Patronymic}\nDate of employment: {DateOfEmployment.ToString("d")}\n" +
                 $"Place of work: {PlaceOfWork.GetPlaceOfWorkInfo()}\nPosition: {Position}\nSalary: {Salary}$";
         }
     }
