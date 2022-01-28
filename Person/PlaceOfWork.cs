@@ -25,7 +25,7 @@ namespace Person
         public PlaceOfWork(string companyName, Address address, string contactNumber)
         {
             CompanyName = companyName;
-            Address = address;
+            Address = new Address(address);
             ContactNumber = contactNumber;
             CompanyWebsite = "none";
         }
