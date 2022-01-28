@@ -40,8 +40,8 @@ namespace Person
 
         public string GetPlaceOfWorkInfo()
         {
-            return $"Company name: {CompanyName}\nAddress: {Address.GetAddress()}\n Contact number: {ContactNumber}" +
-                $"Company website: {CompanyWebsite}";
+            return $"\n   Company name: {CompanyName}\n   Address: {Address.GetAddress()}\n   Contact number: {ContactNumber}\n" +
+                $"   Company website: {CompanyWebsite}";
         }
     }
 }
