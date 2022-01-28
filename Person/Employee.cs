@@ -12,18 +12,19 @@ namespace Person
         public string FirstName { set; get; }
         public string Patronymic { set; get; }
         public DateTime DateOfEmployment { set; get; }
-        public string PlaceOfWork { set; get; }
+
+        public PlaceOfWork PlaceOfWork;
         public string Position { set; get; }
         public int Salary { set; get; }
 
         public Employee(string lastName, string firstName, string patronymic, DateTime dateOfEmployment,
-            string placeOfWork, string position, int salary)
+           PlaceOfWork placeOfWork, string position, int salary)
         {
             LastName = lastName;
             FirstName = firstName;
             Patronymic = patronymic;
             DateOfEmployment = dateOfEmployment;
-            PlaceOfWork = placeOfWork;
+            PlaceOfWork = new PlaceOfWork(placeOfWork);
             Position = position;
             Salary = salary;
         }
@@ -42,7 +43,7 @@ namespace Person
         public string GetInfo()
         {
             return $"Full name: {LastName} {FirstName} {Patronymic}\nDate of employment: {DateOfEmployment.Date}\n" +
-                $"Place of work: {PlaceOfWork}\nPosition: {Position}\nSalary: {Salary}$";
+                $"Place of work: {PlaceOfWork.GetPlaceOfWorkInfo()}\nPosition: {Position}\nSalary: {Salary}$";
         }
     }
 }
